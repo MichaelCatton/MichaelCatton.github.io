@@ -1,199 +1,529 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>W3.CSS Template</title>
+    <title>Michael Catton</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style.css">
-
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="testStyle.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/jquery.slick/1.5.8/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/jquery.slick/1.5.8/slick-theme.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap@5.3.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet"
+          href="https://unpkg.com/bs-brain@2.0.3/components/testimonials/testimonial-2/assets/css/testimonial-2.css"/>
 </head>
 <body>
 
 <!-- Navbar (sit on top) -->
 <div class="w3-top">
     <div class="w3-bar" id="myNavbar">
-        <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+        <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);"
+           onclick="toggleFunction()" title="Toggle Navigation Menu">
             <i class="fa fa-bars"></i>
         </a>
         <a href="#home" class="w3-bar-item w3-button">HOME</a>
-        <a href="#about" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> ABOUT</a>
-        <a href="#portfolio" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> PORTFOLIO</a>
+        <a href="#band" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-address-card"></i> ABOUT</a>
+        <a href="#music" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-music"></i> MUSIC</a>
+        <a href="#press" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-newspaper"></i> PRESS & REVIEWS</a>
+        <a href="#tour" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-calendar"></i> TOUR</a>
         <a href="#contact" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> CONTACT</a>
-        <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
-            <i class="fa fa-search"></i>
-        </a>
     </div>
 
     <!-- Navbar on small screens -->
     <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
-        <a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT</a>
-        <a href="#portfolio" class="w3-bar-item w3-button" onclick="toggleFunction()">PORTFOLIO</a>
+        <a href="#band" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT</a>
+        <a href="#music" class="w3-bar-item w3-button" onclick="toggleFunction()">MUSIC</a>
+        <a href="#press" class="w3-bar-item w3-button" onclick="toggleFunction()">PRESS</a>
+        <a href="#tour" class="w3-bar-item w3-button" onclick="toggleFunction()">TOUR</a>
         <a href="#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTACT</a>
-        <a href="#" class="w3-bar-item w3-button">SEARCH</a>
     </div>
 </div>
 
 <!-- First Parallax Image with Logo Text -->
-<div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
-    <div class="w3-display-middle" style="white-space:nowrap;">
-        <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">MY <span class="w3-hide-small">WEBSITE</span> LOGO</span>
+<div class="bgimg-1 w3-display-container w3-opacity-min">
+    <div class="w3-display-left" style="white-space:nowrap;">
+        <img src="media/pictures/Background/NameLogo_WhiteNOBackground.png" id="home"/>
     </div>
 </div>
 
 <!-- Container (About Section) -->
-<div class="w3-content w3-container w3-padding-64" id="about">
-    <h3 class="w3-center">ABOUT ME</h3>
-    <p class="w3-center"><em>I love photography</em></p>
-    <p>We have created a fictional "personal" website/blog, and our fictional character is a hobby photographer. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
-        qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-    <div class="w3-row">
-        <div class="w3-col m6 w3-center w3-padding-large">
-            <p><b><i class="fa fa-user w3-margin-right"></i>My Name</b></p><br>
-            <img src="/w3images/avatar_hat.jpg" class="w3-round w3-image w3-opacity w3-hover-opacity-off" alt="Photo of Me" width="500" height="333">
-        </div>
-
-        <!-- Hide this text on small devices -->
-        <div class="w3-col m6 w3-hide-small w3-padding-large">
-            <p>Welcome to my website. I am lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-                dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor
-                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        </div>
-    </div>
-    <p class="w3-large w3-center w3-padding-16">Im really good at:</p>
-    <p class="w3-wide"><i class="fa fa-camera"></i>Photography</p>
-    <div class="w3-light-grey">
-        <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:90%">90%</div>
-    </div>
-    <p class="w3-wide"><i class="fa fa-laptop"></i>Web Design</p>
-    <div class="w3-light-grey">
-        <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:85%">85%</div>
-    </div>
-    <p class="w3-wide"><i class="fa fa-photo"></i>Photoshop</p>
-    <div class="w3-light-grey">
-        <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:75%">75%</div>
-    </div>
+<div class="w3-container w3-content w3-center w3-padding-64" style="max-width:80%" id="band">
+    <h2 class="w3-wide">ARTIST BIO</h2>
+    <p class="w3-justify bio">British/Danish rock singer Michael Catton, formerly of Danish rock band Tainted Lady,
+        released his debut solo album “Point Of No Return” in 2023, delivering the energy and flamboyance of the 80’s,
+        with renowned producer and guitarist Soren Andersen (Glenn Hughes, Electric Guitars) bringing a powerful and
+        punchy production to this modern masterpiece of rock, which was recorded in the legendary Medley Studios in the
+        heart of Copenhagen.</p>
+    <p class="w3-justify bio">As the frontman of Tainted Lady, Catton became widely recognised as the standout singer of
+        the modern
+        rock scene, being compared to the likes of Steven Tyler, Ian Gillan and Bruce Dickinson. Having already
+        collaborated with Catton, producing Tainted Lady’s widely acclaimed albums “How The Mighty Have Fallen” and
+        “Sounds Like Freedom // Feels Like War”, Andersen is guitarist, producer and co-writer on the album. “There
+        aren’t many Michael Cattons out there. He’s the whole package,” says Andersen.</p>
+    <p class="w3-justify bio">The style of hard rock that Catton embodies has slowly been on the rise in recent years,
+        and he has
+        already made his mark with album features and live performances with the likes of Steel Panther and glam metal
+        icon Kip Winger. “I was born in the 90’s,” says Catton. “I grew up after most of my favourite bands released
+        their best material, and rock music has rarely hit those highs since. I wanted to make the album that I myself
+        was longing to hear as a teenager. This is the album that has been missing from the record stores, the songs
+        that have been missing from rock bar playlists, the passion that has been absent in so much music in recent
+        years. With this album, I hope to carry the torch for the next generation of rock.</p>
 </div>
 
-<div class="w3-row w3-center w3-dark-grey w3-padding-16">
-    <div class="w3-quarter w3-section">
-        <span class="w3-xlarge">14+</span><br>
-        Partners
-    </div>
-    <div class="w3-quarter w3-section">
-        <span class="w3-xlarge">55+</span><br>
-        Projects Done
-    </div>
-    <div class="w3-quarter w3-section">
-        <span class="w3-xlarge">89+</span><br>
-        Happy Clients
-    </div>
-    <div class="w3-quarter w3-section">
-        <span class="w3-xlarge">150+</span><br>
-        Meetings
+<div class="w3-row w3-padding-32">
+    <div>
+        <img src="media/pictures/Profile/Michael%20Catton%20-%20JAN%202023%20007.jpg" class="w3-round "
+             alt="Michael Promo1"
+             style="width:33%" onclick="onClick(this)">
+        <img src="media/pictures/Profile/Michael%20Catton%20-%20JAN%202023%20004.jpg" class="w3-round"
+             alt="Michael Promo2"
+             style="width:33%" onclick="onClick(this)">
+        <img src="media/pictures/Profile/Michael%20Catton%20-%20JAN%202023%20005.jpg" class="w3-round"
+             alt="Michael Promo3"
+             style="width:33%" onclick="onClick(this)">
     </div>
 </div>
 
 <!-- Second Parallax Image with Portfolio Text -->
 <div class="bgimg-2 w3-display-container w3-opacity-min">
     <div class="w3-display-middle">
-        <span class="w3-xxlarge w3-text-white w3-wide">PORTFOLIO</span>
+        <span class="w3-xxlarge w3-text-white w3-wide shadow">MUSIC</span>
     </div>
 </div>
-
 <!-- Container (Portfolio Section) -->
-<div class="w3-content w3-container w3-padding-64" id="portfolio">
-    <h3 class="w3-center">MY WORK</h3>
-    <p class="w3-center"><em>Here are some of my latest lorem work ipsum tipsum.<br> Click on the images to make them bigger</em></p><br>
-
-    <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
-    <div class="w3-row-padding w3-center">
-        <div class="w3-col m3">
-            <img src="/w3images/p1.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="The mist over the mountains">
-        </div>
-
-        <div class="w3-col m3">
-            <img src="/w3images/p2.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Coffee beans">
-        </div>
-
-        <div class="w3-col m3">
-            <img src="/w3images/p3.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Bear closeup">
-        </div>
-
-        <div class="w3-col m3">
-            <img src="/w3images/p4.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Quiet ocean">
+<div class="w3-content w3-container w3-padding-64" id="music">
+    <div class="carousel-wrapper">
+        <div class="carousel">
+            <div class="carousel-slide">
+                <iframe width="960" height="540"
+                        src="https://www.youtube.com/embed/9EJA5kZlvxU?si=ZqSxaXGQaZVDLPKS" title="Armageddon again"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+            </div>
+            <div class="carousel-slide">
+                <iframe width="960" height="540" src="https://www.youtube.com/embed/ayu_d36hM6k?si=M0RJrvr_XyfGFXor"
+                        title="Ready for the takin'"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+            </div>
+            <div class="carousel-slide">
+                <iframe width="960" height="540" src="https://www.youtube.com/embed/yq8p3eLy5mY?si=uUlfb7g0iSDGmucb"
+                        title="Brother"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+            </div>
         </div>
     </div>
 
-    <div class="w3-row-padding w3-center w3-section">
-        <div class="w3-col m3">
-            <img src="/w3images/p5.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="The mist">
-        </div>
-
-        <div class="w3-col m3">
-            <img src="/w3images/p6.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="My beloved typewriter">
-        </div>
-
-        <div class="w3-col m3">
-            <img src="/w3images/p7.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Empty ghost train">
-        </div>
-
-        <div class="w3-col m3">
-            <img src="/w3images/p8.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Sailing">
-        </div>
-        <button class="w3-button w3-padding-large w3-light-grey" style="margin-top:64px">LOAD MORE</button>
+    <div class="w3-content w3-container w3-padding-64">
+        <iframe width="100%" height="450" scrolling="no" frameborder="no" allow="autoplay"
+                src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1773463443%3Fsecret_token%3Ds-kByBeLM6L9s&color=%23ff0000&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+        <div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow:
+    hidden;white-space: nowrap;text-overflow: ellipsis;
+    font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;
+    font-weight: 100;"><a href="https://soundcloud.com/michael-catton-947354573" title="Michael Catton" target="_blank"
+                          style="color: #cccccc; text-decoration: none;">Michael Catton</a> ·
+            <a href="https://soundcloud.com/michael-catton-947354573/sets/michael-catton/s-kByBeLM6L9s"
+               title="Michael Catton"
+               target="_blank" style="color: #cccccc; text-decoration: none;">Michael Catton</a></div>
     </div>
 </div>
 
-<!-- Modal for full size images on click-->
-<div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
-    <span class="w3-button w3-large w3-black w3-display-topright" title="Close Modal Image"><i class="fa fa-remove"></i></span>
-    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
-        <img id="img01" class="w3-image">
-        <p id="caption" class="w3-opacity w3-large"></p>
+<!-- PRESS section -->
+<div class="bgimg-2 w3-display-container w3-opacity-min" id="press">
+    <div class="w3-display-middle">
+        <span class="w3-xxlarge w3-text-white w3-wide shadow">PRESS & REVIEWS</span>
     </div>
 </div>
 
-<!-- Third Parallax Image with Portfolio Text -->
+<!--Container for press -->
+<section class="bg-light py-3 py-md-5">
+    <div class="container">
+        <div class="row justify-content-center">
+            <!--CITAT 1 -->
+            <div class="col-md-3">
+                <div class="card border-0 border-bottom border-primary shadow-sm">
+                    <div class="card-body p-4 p-xxl-5">
+                        <figure>
+                            <figcaption>
+                                <blockquote class="bsb-blockquote-icon mb-4 text-end">
+                                    <p><b><br></b></p>
+                                    First-class, ultra-catchy celebration of the 80s Sunset Strip sounds.
+                                </blockquote>
+                                <h4 class="mb-2">Classic Rock Magazine</h4>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+            <!--CITAT 2 -->
+            <div class="col-md-3">
+                <div class="card border-0 border-bottom border-primary shadow-sm">
+                    <div class="card-body p-4 p-xxl-5">
+                        <figure>
+                            <figcaption>
+                                <blockquote class="bsb-blockquote-icon mb-4 text-end">
+                                    <p><b><br></b></p>
+                                    Michael Catton is rock vocalist of the year.
+                                </blockquote>
+                                <h4 class="mb-2">Rockposer Dot Com</h4>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+            <!--CITAT 3 -->
+            <div class="col-md-3">
+                <div class="card border-0 border-bottom border-primary shadow-sm">
+                    <div class="card-body p-4 p-xxl-5">
+                        <figure>
+                            <figcaption>
+                                <blockquote class="bsb-blockquote-icon mb-4 text-end">
+                                    <p><b>10/10</b></p>
+                                    Michael Catton delivers a formidable vocal performance on all tracks.
+                                </blockquote>
+                                <h4 class="mb-2">Metalized</h4>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+            <!--CITAT 4 -->
+            <div class="col-12 col-md-3">
+                <div class="card border-0 border-bottom border-primary shadow-sm">
+                    <div class="card-body p-4 p-xxl-5">
+                        <figure>
+                            <figcaption>
+                                <blockquote class="bsb-blockquote-icon mb-4 text-end">
+                                    <p><b>9/10</b></p>
+                                    This album should immediately go to the top of your shopping list!
+                                </blockquote>
+                                <h4 class="mb-2">Powerplay Magazine</h4>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <!--CITAT 5 -->
+            <div class="col-md-3">
+                <div class="card border-0 border-bottom border-primary shadow-sm">
+                    <div class="card-body p-4 p-xxl-5">
+                        <figure>
+                            <figcaption>
+                                <blockquote class="bsb-blockquote-icon mb-4 text-end">
+                                    <p><b><br></b></p>
+                                    If you don’t think 1987 has been topped as a year in music, this is for you.
+                                </blockquote>
+                                <h4 class="mb-2">Louder</h4>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+            <!--CITAT 6 -->
+            <div class="col-md-3">
+                <div class="card border-0 border-bottom border-primary shadow-sm">
+                    <div class="card-body p-4 p-xxl-5">
+                        <figure>
+                            <figcaption>
+                                <blockquote class="bsb-blockquote-icon mb-4 text-end">
+                                    <p><b>90/100</b></p>
+                                    A record that Catton can be very proud of, evoking memories of ex-Journey singer
+                                    Steve Perry.
+                                </blockquote>
+                                <h4 class="mb-2">Aardschok</h4>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+            <!--CITAT 7 -->
+            <div class="col-12 col-md-3">
+                <div class="card border-0 border-bottom border-primary shadow-sm">
+                    <div class="card-body p-4 p-xxl-5">
+                        <figure>
+                            <figcaption>
+                                <blockquote class="bsb-blockquote-icon mb-4 text-end">
+                                    <p><b>6/6</b></p>
+                                    You won’t go wrong with this album.
+                                </blockquote>
+                                <h4 class="mb-2">Calles Rock Corner</h4>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+            <!--CITAT 8 -->
+            <div class="col-12 col-md-3">
+                <div class="card border-0 border-bottom border-primary shadow-sm">
+                    <div class="card-body p-4 p-xxl-5">
+                        <figure>
+                            <figcaption>
+                                <blockquote class="bsb-blockquote-icon mb-4 text-end">
+                                    <p><b><br></b></p>
+                                    With this debut album you can well be excited to see what the young man will conjure
+                                    up in the future!
+                                </blockquote>
+                                <h4 class="mb-2">Classic Rock Germany</h4>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <!--CITAT 9 -->
+            <div class="col-12 col-md-3">
+                <div class="card border-0 border-bottom border-primary shadow-sm">
+                    <div class="card-body p-4 p-xxl-5">
+                        <figure>
+                            <figcaption>
+                                <blockquote class="bsb-blockquote-icon mb-4 text-end">
+                                    <p><b>86%</b></p>
+                                    It has the potential to be found in the annual tops of many lovers of the genre.
+                                </blockquote>
+                                <h4 class="mb-2">viriAOR</h4>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+            <!--CITAT 10 -->
+            <div class="col-12 col-md-3">
+                <div class="card border-0 border-bottom border-primary shadow-sm">
+                    <div class="card-body p-4 p-xxl-5">
+                        <figure>
+                            <figcaption>
+                                <blockquote class="bsb-blockquote-icon mb-4 text-end">
+                                    <p><b>4/5</b></p>
+                                    A good juicy round of hard-glam-heavy rock from start to finish.
+                                </blockquote>
+                                <h4 class="mb-2">Rockzeit</h4>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+            <!--CITAT 11 -->
+            <div class="col-12 col-md-3">
+                <div class="card border-0 border-bottom border-primary shadow-sm">
+                    <div class="card-body p-4 p-xxl-5">
+                        <figure>
+                            <figcaption>
+                                <blockquote class="bsb-blockquote-icon mb-4 text-end">
+                                    <p><b><br></b></p>
+                                    Modern-day rockers like Michael Catton and Soren Andersen are dedicated to keeping
+                                    the memory of heavy rock’s glory days alive.
+                                </blockquote>
+                                <h4 class="mb-2">Sentinel Daily</h4>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+            <!-- CITAT 12 -->
+            <div class="col-12 col-md-3">
+                <div class="card border-0 border-bottom border-primary shadow-sm">
+                    <div class="card-body p-4 p-xxl-5">
+                        <figure>
+                            <figcaption>
+                                <blockquote class="bsb-blockquote-icon mb-4 text-end">
+                                    <p><b>6/6</b></p>
+                                    The surprise of the year and one of the year’s best albums.
+                                </blockquote>
+                                <h4 class="mb-2">Scream Magazine</h4>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <!--CITAT 13 -->
+            <div class="col-12 col-md-3">
+                <div class="card border-0 border-bottom border-primary shadow-sm">
+                    <div class="card-body p-4 p-xxl-5">
+                        <figure>
+                            <figcaption>
+                                <blockquote class="bsb-blockquote-icon mb-4 text-end">
+                                    <p><b>5/6</b></p>
+                                    Ten strong songs which take us back into the frenzy of the 80s with brilliant
+                                    memorable choruses and superbly crafted solos.
+                                </blockquote>
+                                <h4 class="mb-2">Metallian Magazine</h4>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+            <!--CITAT 14 -->
+            <div class="col-12 col-md-3">
+                <div class="card border-0 border-bottom border-primary shadow-sm">
+                    <div class="card-body p-4 p-xxl-5">
+                        <figure>
+                            <figcaption>
+                                <blockquote class="bsb-blockquote-icon mb-4 text-end">
+                                    <p><b>8/10</b></p>
+                                    The Brit is blessed with a seasoned voice that can best be compared to that of
+                                    Steven Tyler of Aerosmith.
+                                </blockquote>
+                                <h4 class="mb-2">Rock Tribune Magazine</h4>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Tour parallax  -->
+<div class="bgimg-2 w3-display-container w3-opacity-min">
+    <div class="w3-display-middle">
+        <span class="w3-xxlarge w3-text-white w3-wide shadow">TOUR DATES</span>
+    </div>
+</div>
+
+<!-- Container (Music Section) -->
+<div class="w3-content w3-container w3-padding-64 w3-content" id="tour">
+    <a class="bit-widget-initializer"
+       data-artist-name="id_15535966"
+       data-background-color="#ffffff"
+       data-separator-color="#DDDDDD"
+       data-text-color="#424242"
+       data-font="Helvetica"
+       data-auto-style="true"
+
+       data-button-label-capitalization="capitalize"
+       data-header-capitalization="undefined"
+       data-location-capitalization="capitalize"
+       data-venue-capitalization="capitalize"
+       data-display-local-dates="true"
+       data-local-dates-position="tab"
+       data-display-past-dates="true"
+       data-display-details=""
+       data-display-lineup=""
+       data-display-start-time=""
+       data-social-share-icon="true"
+       data-display-limit="all"
+
+       data-date-format="MMM. D, YYYY"
+       data-date-orientation="horizontal"
+       data-date-border-color="#4A4A4A"
+       data-date-border-width="1px"
+       data-date-capitalization="undefined"
+       data-date-border-radius="10px"
+
+       data-event-ticket-cta-size="medium"
+       data-event-custom-ticket-text="undefined"
+       data-event-ticket-text="TICKETS"
+       data-event-ticket-icon=""
+       data-event-ticket-cta-text-color="#FFFFFF"
+       data-event-ticket-cta-bg-color="#4A4A4A"
+       data-event-ticket-cta-border-color="#4A4A4A"
+       data-event-ticket-cta-border-width="0px"
+       data-event-ticket-cta-border-radius="4px"
+
+       data-sold-out-button-text-color="#FFFFFF"
+       data-sold-out-button-background-color="#4A4A4A"
+       data-sold-out-button-border-color="#4A4A4A"
+       data-sold-out-button-clickable="true"
+
+       data-event-rsvp-position="left"
+       data-event-rsvp-cta-size="medium"
+       data-event-rsvp-only-show-icon="undefined"
+       data-event-rsvp-text="REMIND ME"
+       data-event-rsvp-icon=""
+       data-event-rsvp-cta-text-color="#4A4A4A"
+       data-event-rsvp-cta-bg-color="#FFFFFF"
+       data-event-rsvp-cta-border-color="#4A4A4A"
+       data-event-rsvp-cta-border-width="1px"
+       data-event-rsvp-cta-border-radius="4px"
+
+       data-follow-section-position="top"
+       data-follow-section-alignment="center"
+       data-follow-section-header-text="Get updates on new shows, new music, and more."
+       data-follow-section-cta-size="medium"
+       data-follow-section-cta-text="FOLLOW"
+       data-follow-section-cta-icon="true"
+       data-follow-section-cta-text-color="#FFFFFF"
+       data-follow-section-cta-bg-color="#4A4A4A"
+       data-follow-section-cta-border-color="#4A4A4A"
+       data-follow-section-cta-border-width="0px"
+       data-follow-section-cta-border-radius="4px"
+
+       data-play-my-city-position="bottom"
+       data-play-my-city-alignment="Center"
+       data-play-my-city-header-text="Don’t see a show near you?"
+       data-play-my-city-cta-size="medium"
+       data-play-my-city-cta-text="REQUEST A SHOW"
+       data-play-my-city-cta-icon="true"
+       data-play-my-city-cta-text-color="#FFFFFF"
+       data-play-my-city-cta-bg-color="#4A4A4A"
+       data-play-my-city-cta-border-color="#4A4A4A"
+       data-play-my-city-cta-border-width="0px"
+       data-play-my-city-cta-border-radius="4px"
+
+       data-optin-font=""
+       data-optin-text-color=""
+       data-optin-bg-color=""
+       data-optin-cta-text-color=""
+       data-optin-cta-bg-color=""
+       data-optin-cta-border-width=""
+       data-optin-cta-border-radius=""
+       data-optin-cta-border-color=""
+
+       data-language="en"
+       data-layout-breakpoint="900"
+       data-app-id=""
+       data-affil-code=""
+       data-bit-logo-position="bottomRight"
+       data-bit-logo-color="#CCCCCC"
+    ></a>
+</div>
+
+<!-- Third Parallax Image with Contact Text -->
 <div class="bgimg-3 w3-display-container w3-opacity-min">
     <div class="w3-display-middle">
-        <span class="w3-xxlarge w3-text-white w3-wide">CONTACT</span>
+        <span class="w3-xxlarge w3-text-white w3-wide shadow">CONTACT</span>
     </div>
 </div>
 
-<!-- Container (Contact Section) -->
+<!--  Contact Section -->
 <div class="w3-content w3-container w3-padding-64" id="contact">
-    <h3 class="w3-center">WHERE I WORK</h3>
-    <p class="w3-center"><em>I'd love your feedback!</em></p>
+    <div class="logos">
+        <p class="w3-large w3-center" id="logos">
+            <a href="https://open.spotify.com/album/1ptW9nZHC0ryk80mJa5O4p?go=1&nd=1&dlsi=ad3ed8b801e84d3c"
+               target="_blank"> <img src="media/pictures/SoMe/spotify-square-color.png" alt="spotify" height="95"
+                                     width="95"> </a>
+            <a href="https://www.facebook.com/michaelcattonofficial/" target="_blank"> <img
+                    src="media/pictures/SoMe/fb-blaa-square.png" alt="facebook" height="90" width="90"> </a>
+            <a href="https://www.instagram.com/michaelcattonofficial/" target="_blank"> <img
+                    src="media/pictures/SoMe/instagram-square-color.png" alt="instagram" height="100" width="100"> </a>
+        </p>
+    </div>
 
     <div class="w3-row w3-padding-32 w3-section">
         <div class="w3-col m4 w3-container">
-            <img src="/w3images/map.jpg" class="w3-image w3-round" style="width:100%">
+
         </div>
         <div class="w3-col m8 w3-panel">
             <div class="w3-large w3-margin-bottom">
-                <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Chicago, US<br>
-                <i class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Phone: +00 151515<br>
-                <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Email: mail@mail.com<br>
+                <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Copenhagen, Denmark<br>
+                <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Artist email:
+                <a href="mailto:contact@michaelcatton.dk"> contact@michaelcatton.dk</a> <br>
+                <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Booking email:
+                <a href="mailto:jack@targetgroup.dk"> jack@targetgroup.dk</a>
             </div>
-            <p>Swing by for a cup of <i class="fa fa-coffee"></i>, or leave me a note:</p>
-            <form action="/action_page.php" target="_blank">
-                <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
-                    <div class="w3-half">
-                        <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
-                    </div>
-                    <div class="w3-half">
-                        <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
-                    </div>
-                </div>
-                <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
-                <button class="w3-button w3-black w3-right w3-section" type="submit">
-                    <i class="fa fa-paper-plane"></i> SEND MESSAGE
-                </button>
-            </form>
         </div>
     </div>
 </div>
@@ -209,39 +539,51 @@
         <i class="fa fa-twitter w3-hover-opacity"></i>
         <i class="fa fa-linkedin w3-hover-opacity"></i>
     </div>
-    <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
 </footer>
-
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.slick/1.5.8/slick.min.js"></script>
 <script>
-    // Modal Image Gallery
-    function onClick(element) {
-        document.getElementById("img01").src = element.src;
-        document.getElementById("modal01").style.display = "block";
-        var captionText = document.getElementById("caption");
-        captionText.innerHTML = element.alt;
-    }
+    $(document).ready(function () {
+        var $carousel = $('.carousel');
 
-    // Change style of navbar on scroll
-    window.onscroll = function() {myFunction()};
-    function myFunction() {
-        var navbar = document.getElementById("myNavbar");
-        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-            navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
-        } else {
-            navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
-        }
-    }
+        $carousel.slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            infinite: false,
+            dots: true,
+            arrows: true,
+            prevArrow: '<button type="button" class="slick-prev"><i class="fas fa-chevron-left"></i></button>',
+            nextArrow: '<button type="button" class="slick-next"><i class="fas fa-chevron-right"></i></button>'
+        });
 
-    // Used to toggle the menu on small screens when clicking on the menu button
-    function toggleFunction() {
-        var x = document.getElementById("navDemo");
-        if (x.className.indexOf("w3-show") == -1) {
-            x.className += " w3-show";
-        } else {
-            x.className = x.className.replace(" w3-show", "");
-        }
-    }
+        var $prevBtn = $('.slick-prev');
+        var $nextBtn = $('.slick-next');
+
+        $prevBtn.click(function () {
+            $carousel.slick('slickPrev');
+        });
+
+        $nextBtn.click(function () {
+            $carousel.slick('slickNext');
+        });
+
+        $carousel.on('afterChange', function (event, slick, currentSlide) {
+            $prevBtn.toggleClass('slick-disabled', currentSlide === 0);
+            $nextBtn.toggleClass('slick-disabled', currentSlide === slick.slideCount - 1);
+        });
+
+        var maxCardHeight = 0;
+        $('.card').each(function () {
+            var cardHeight = $(this).outerHeight();
+            if (cardHeight > maxCardHeight) {
+                maxCardHeight = cardHeight;
+            }
+        });
+        $('.card').outerHeight(maxCardHeight);
+    });
 </script>
-
+<script charset="utf-8" src="https://widgetv3.bandsintown.com/main.min.js"></script>
 </body>
 </html>
